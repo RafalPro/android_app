@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+<!--    <fragment-->
+<!--        android:id="@+id/place_autocomplete_fragment1"-->
+<!--        android:name="com.google.android.gms.location.places.ui.SupportPlaceAutocompleteFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+
+    <EditText
+        android:id="@+id/input_field"
+        style="@drawable/edittext_background"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter Address"
+        android:inputType="text">
+    </EditText>
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="40dp"
+        android:layout_height="47dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="10dp"
+        android:text="Go"
+        android:layout_toRightOf="@id/input_field"
+        android:onClick="onSearch">
+    </Button>
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/input_field"
+        tools:context=".MapsActivity" />
+
+
+</RelativeLayout>
